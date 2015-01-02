@@ -1,4 +1,4 @@
-__author__ = 'sharad'
+__author__ = 'Sharad'
 
 def anagramSolution1(s1, s2):
     list1 = list(s1)
