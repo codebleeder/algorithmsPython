@@ -3,7 +3,7 @@ __author__ = 'cloudera'
 def anagramSolution2(s1, s2):
     list1 = list(s1)
     list2 = list(s2)
-    list1.sort() # complexity will depend on these sort steps
+    list1.sort()  # complexity will depend on these sort steps
     list2.sort()
     match = True
 
