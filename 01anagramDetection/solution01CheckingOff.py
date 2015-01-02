@@ -9,9 +9,6 @@ def anagramSolution1(s1, s2):
     matchFound = False
     matchFound2 = True
 
-    # check if first alphabet is in second string
-    # and print the position
-    # if not say it isn't there
     for pos1 in range(len(list1)):
         #matchFound = False
         for pos2 in range(len(list2)):
