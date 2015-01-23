@@ -1,5 +1,5 @@
 __author__ = 'cloudera'
-from unorderedList import Node
+from node import Node
 from unorderedList import UnorderedList
 
 newNode = Node(45)
