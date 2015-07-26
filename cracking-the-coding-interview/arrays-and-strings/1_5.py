@@ -35,14 +35,25 @@ def get_size_compressed(input_str_list):
     return size
 
 
-def compression_good(input_str):
+def compress_good(input_str):
     input_str_list = list(input_str)
     size_compressed = get_size_compressed(input_str_list)
     if size_compressed < len(input_str):
-        print size_compressed
+        compressed = []
+        last = ''
+        count = 1
+        for i in input_str_list:
+            if i == last:
+                count += 1
+            else:
+                last = i
+                compressed.append(last+str(count))
+                count = 1
+        compressed.append(last+str(count))
+        return ''.join(compressed)
     else:
         return input_str
 
 test_input = ['sharad', 'shaarad', 'aaabbbccc']
 for i in test_input:
-    print compress_bad(i)
+    print compress_good(i)
