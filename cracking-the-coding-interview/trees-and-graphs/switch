@@ -1,0 +1,42 @@
+vlan    mac_address         port    age
+10      00:AA:BB:CC:DD:EE   1/1     10
+20      11:22:33:44:55:66   1/2     20
+20
+
+1. login to switch
+2. get the output
+3. store and validate the field formats
+
+class switch:
+    def __init__(self):
+        self.usernames = {uname1: pass1, uname2:pass2}
+        self.ip_addr = " "
+        self.tables = {vlan : [{mac_address: }, {port: }, {age: }]}
+        self.mac_addr_len = "
+    def login(username, pass, ip_addr):
+        # validate username and password
+        if (ip_addr == self.ip_addr and self.usernames[username] == password):
+            # validate
+            return db
+
+    def get_tables(self, vlan):
+        # validate
+        mac_addr = self.tables[vlan][0]
+        for entries in self.table:
+            for i in mac_addr:
+                if i != '(0:9)||(A:F)||:':
+                    break;
+
+        for key in dict:
+
+1.1.1.1
+input = ip_address
+ count = 100
+
+    def get_list(ip_addr, count):
+
+
+        #index = ip_addresses(ip_address[3])
+        return ip_addresses[ip_address[3]: ip_address[3]+count]
+        int a []
+        register_variables

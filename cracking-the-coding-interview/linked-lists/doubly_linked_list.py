@@ -25,18 +25,38 @@ class Node:
     def get_previous(self):
         return self.previous
 
-# linked list values
-class Linked_list:
-    def __init__(self):
-        self.head = None
-        self.tail = None
 
-    def add_node(self, num):
+# linked list values
+class Doubly_linked_list:
+    def __init__(self, item):
+        self.head = Node(item)
+
+    def add(self, num):
         new_node = Node(num)
-        if self.head == None:
-            self.head = new_node
-            self.tail = new_node
-        else:
-            self.head.set_next(new_node)
-            new_node.set_previous(self.head)
-            new_node.set_next
+        new_node.set_next(self.head)
+        self.head.set_previous(new_node)
+        self.head = new_node
+
+    def delete(self, item):
+        current_node = self.head
+        previous_node = None
+        while current_node is not None:
+            if current_node.get_data() != item:
+                previous_node = current_node
+                current_node = current_node.get_next()
+            else:
+                if previous_node is None:
+                    self.head = current_node.get_next()
+                elif current_node.get_next() is None:
+                    previous_node.set_next(None)
+                else:
+                    previous_node.set_next(current_node.get_next())
+                    current_node.get_next().set_previous(previous_node)
+                return True
+        return False
+
+    def print_linked_list(self):
+        current_node = self.head
+        while current_node is not None:
+            print current_node.get_data()
+            current_node = current_node.get_next()

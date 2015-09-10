@@ -13,7 +13,8 @@ def anagram(s1, s2):
 
         # compare with char counts in s2
         for char in s2:
-            if letters[ord(char)]-1 < 0:
+            letters[ord(char)] -= 1
+            if letters[ord(char)] < 0:
                 return False
         return True
 
@@ -26,7 +27,7 @@ def anagram2(s1, s2):
 
 
 # test
-print anagram2('sharad', 'darahs')
-print anagram2('sharad', 'shard')
+print anagram('sharad', 'darahs')
+print anagram('sharad', 'shard')
 
 # declare an integer array with space for 256 characters

@@ -31,6 +31,18 @@ def unique3(s):
             unique_map[letter] = True
     return True
 
+
+def unique4(s):
+    if len(s) > 128:
+        return False
+    char_set = [None] * 128
+    for i in range(len(s)):
+        val = s[i]
+        if char_set[ord(val)]:
+            return False
+        char_set[ord(val)] = True
+    return True
+
 # main
-print unique3('sharad')
-print unique3('shard')
+print unique4('sharad')
+print unique4('shard')
