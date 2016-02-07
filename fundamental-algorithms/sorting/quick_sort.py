@@ -15,7 +15,6 @@ def partition(arr, p, r):
         if arr[j] <= key:
             i += 1
             swap(arr, i, j)
-
         j += 1
     swap(arr, i+1, r)
     return i+1
